@@ -124,7 +124,7 @@ rm -f /root/dropbear-2017.75.tar.bz2
 
 # install stunnel4
 apt-get -y install stunnel4
-wget -O /etc/stunnel/stunnel.pem "https://raw.githubusercontent.com/Rizkyaa/anu/master/cat.pem"
+wget -O /etc/stunnel/stunnel.pem "https://raw.githubusercontent.com/Rizkyaa/anu/master/stunnel.pem"
 wget -O /etc/stunnel/stunnel.conf "https://raw.githubusercontent.com/kholizsivoi/stunnel4/master/stunnel.conf"
 sed -i $MYIP2 /etc/stunnel/stunnel.conf
 sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
