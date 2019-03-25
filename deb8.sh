@@ -185,6 +185,7 @@ service dropbear restart
 # download script
 cd /usr/bin
 wget -O menu "https://raw.githubusercontent.com/kholizsivoi/script/master/menu.sh"
+wget -O bench "https://raw.githubusercontent.com/teddysun/across/master/bench.sh"
 wget -O user-add "https://raw.githubusercontent.com/kholizsivoi/script/master/user-add.sh"
 wget -O trial "https://raw.githubusercontent.com/kholizsivoi/script/master/trial.sh"
 wget -O user-del "https://raw.githubusercontent.com/kholizsivoi/script/master/hapus.sh"
@@ -199,6 +200,7 @@ wget -O about "https://raw.githubusercontent.com/kholizsivoi/script/master/about
 echo "0 0 * * * root /sbin/reboot" > /etc/cron.d/reboot
 
 chmod +x menu
+chmod +x bench
 chmod +x user-add
 chmod +x trial
 chmod +x user-del
