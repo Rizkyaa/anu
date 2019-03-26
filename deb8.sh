@@ -57,7 +57,7 @@ rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
 wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/kholizsivoi/script/master/nginx.conf"
 mkdir -p /home/vps/public_html
-echo "<pre>~sivoi~</pre>" > /home/vps/public_html/index.html
+echo "<pre>~noobx-</pre>" > /home/vps/public_html/index.html
 wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/kholizsivoi/script/master/vps.conf"
 service nginx restart
 
@@ -107,19 +107,6 @@ echo "/bin/false" >> /etc/shells
 echo "/usr/sbin/nologin" >> /etc/shells
 service ssh restart
 service dropbear restart
-
-# install dropbear 2017
-cd
-wget https://raw.githubusercontent.com/kholizsivoi/script/master/dropbear-2017.75.tar.bz2
-apt-get install zlib1g-dev
-bzip2 -cd dropbear-2017.75.tar.bz2  | tar xvf -
-cd dropbear-2017.75
-./configure
-make && make install
-mv /usr/sbin/dropbear /usr/sbin/dropbear1
-ln /usr/local/sbin/dropbear /usr/sbin/dropbear
-service dropbear restart
-rm -f /root/dropbear-2017.75.tar.bz2
 
 # install stunnel4
 apt-get -y install stunnel4
