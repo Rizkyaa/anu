@@ -84,6 +84,7 @@ cp client.ovpn /home/vps/public_html/
 
 # install badvpn
 cd
+apt-get install cmake make gcc -y
 wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/kholizsivoi/script/master/badvpn-udpgw"
 if [ "$OS" == "x86_64" ]; then
   wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/kholizsivoi/script/master/badvpn-udpgw64"
